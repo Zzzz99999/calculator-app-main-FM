@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+.theme1 {
+    --main-bg: hsl(222, 26%, 31%);
+    --keypad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --key1-bg: hsl(225, 21%, 49%);
+    --key1-shd: hsl(224, 28%, 35%);
+    --key2-bg: hsl(6, 63%, 50%);
+    --key2-shd: hsl(6, 70%, 34%);
+    --key3-bg: hsl(30, 25%, 89%);
+    --key3-shd: hsl(28, 16%, 65%);
+    --text1: white;
+    --text2: hsl(221, 14%, 31%);
+    --text3: white;
+    --text4: white;
+}
+
+.theme2 {
+    --main-bg: hsl(0, 0%, 90%);
+    --keypad-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --key1-bg: hsl(185, 42%, 37%);
+    --key1-shd: hsl(185, 58%, 25%);
+    --key2-bg: hsl(25, 98%, 40%);
+    --key2-shd: hsl(25, 99%, 27%);
+    --key3-bg: hsl(45, 7%, 89%);
+    --key3-shd: hsl(35, 11%, 61%);
+    --text1: hsl(60, 10%, 19%);
+    --text2: hsl(60, 10%, 19%);
+    --text3: white;
+    --text4: white;
+}
+
+.theme3 {
+    --main-bg: hsl(268, 75%, 9%);
+    --keypad-bg: hsl(268, 71%, 12%);
+    --screen-bg: hsl(268, 71%, 12%);
+    --key1-bg: hsl(281, 89%, 26%);
+    --key1-shd: hsl(285, 91%, 52%);
+    --key2-bg: hsl(176, 100%, 44%);
+    --key2-shd: hsl(177, 92%, 70%);
+    --key3-bg: hsl(268, 47%, 21%);
+    --key3-shd: hsl(290, 70%, 36%);
+    --text1: hsl(52, 100%, 62%);
+    --text2: hsl(52, 100%, 62%);
+    --text3: white;
+    --text4: hsl(198, 20%, 13%);
+}
+
+body {
+    background: var(--main-bg);
+    font-family: 'Spartan', sans-serif;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    /* border: solid 1px black; */
+    flex-basis: 37.5%;
+    height: 87.7%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+
+article:nth-of-type(1) {
+    height: 7.75%;
+    padding: 0.6em 0 0;
+    align-items: baseline;
+    color: var(--text1);
+}
+
+article:nth-of-type(2) {
+    height: 18%;
+    background: var(--screen-bg);
+    color: var(--text1);
+}
+
+article:nth-of-type(3) {
+    height: 67.5%;
+    padding: 2rem;
+    background: var(--keypad-bg);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+form section {
+    display: flex;
+    font-size: 0.5rem;
+    align-items: flex-end;
+}
+
+form .input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h3 {
+    margin-right: 1.3em;
+    margin-bottom: 0.35em;
+    letter-spacing: 0.1em;
+}
+
+form input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0 2px;
+}
+
+.theme1 form input:nth-of-type(1) {
+    border: 6px solid var(--key2-bg);
+    border-radius: 50%;
+    background: var(--key2-bg);
+}
+
+.theme2 form input:nth-of-type(2) {
+    border: 6px solid var(--key2-bg);
+    border-radius: 50%;
+    background: var(--key2-bg);
+}
+
+.theme3 form input:nth-of-type(3) {
+    border: 6px solid var(--key2-bg);
+    border-radius: 50%;
+    background: var(--key2-bg);
+}
+
+.input div:nth-of-type(2) {
+    background: var(--keypad-bg);
+    border-radius: 1em;
+    margin-top: 0.3em;
+    width: 45px;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form input:focus {
+    outline: none;
+}
+
+button {
+    font-family: 'Spartan', sans-serif;
+    background: var(--key3-bg);
+    color: var(--text2);
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
+    border-bottom: 3px solid var(--key3-shd);
+}
+
+.btn-word {
+    background: var(--key1-bg);
+    border-bottom: 3px solid var(--key1-shd);
+    color: var(--text3);
+    font-size: 1.2rem;
+}
+
+.equal {
+    background: var(--key2-bg);
+    border-bottom: 3px solid var(--key2-shd);
+    color: var(--text4);
+
+}
+
+button:focus {
+    outline: none;
+}
