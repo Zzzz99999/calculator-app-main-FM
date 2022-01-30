@@ -15,7 +15,6 @@
     --text1: white;
     --text2: hsl(221, 14%, 31%);
     --text3: white;
-    --text4: white;
 }
 
 .theme2 {
@@ -31,7 +30,6 @@
     --text1: hsl(60, 10%, 19%);
     --text2: hsl(60, 10%, 19%);
     --text3: white;
-    --text4: white;
 }
 
 .theme3 {
@@ -46,8 +44,7 @@
     --key3-shd: hsl(290, 70%, 36%);
     --text1: hsl(52, 100%, 62%);
     --text2: hsl(52, 100%, 62%);
-    --text3: white;
-    --text4: hsl(198, 20%, 13%);
+    --text3: hsl(198, 20%, 13%);
 }
 
 body {
@@ -87,6 +84,9 @@ article:nth-of-type(2) {
     height: 18%;
     background: var(--screen-bg);
     color: var(--text1);
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2.5rem;
 }
 
 article:nth-of-type(3) {
@@ -137,6 +137,11 @@ form input {
     border-radius: 50%;
     width: 10px;
     height: 10px;
+    cursor: pointer;
+}
+
+form label {
+    cursor: pointer;
 }
 
 input:checked {
@@ -171,14 +176,14 @@ button {
 .btn-word {
     background: var(--key1-bg);
     border-bottom: 3px solid var(--key1-shd);
-    color: var(--text3);
+    color: white;
     font-size: 1.2rem;
 }
 
 .equal {
     background: var(--key2-bg);
     border-bottom: 3px solid var(--key2-shd);
-    color: var(--text4);
+    color: var(--text3);
 
 }
 
